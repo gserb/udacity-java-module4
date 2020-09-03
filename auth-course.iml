@@ -95,5 +95,6 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-test:5.1.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.1.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
+    <orderEntry type="library" name="Maven: io.netty:netty-common:4.1.47.Final" level="project" />
   </component>
 </module>

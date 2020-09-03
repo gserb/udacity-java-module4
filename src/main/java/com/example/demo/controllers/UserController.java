@@ -25,7 +25,9 @@ import org.slf4j.LoggerFactory;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
+
 	private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
 	@Autowired
 	private UserRepository userRepository;
 	
@@ -56,7 +58,7 @@ public class UserController {
 
 		if(createUserRequest.getPassword().length() < 7 ||
 				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())) {
-			logger.error("Error with user password. Cannot create user {}", createUserRequest.getUsername());
+			logger.error("Error /create. Cannot create user {}", createUserRequest.getUsername());
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));

@@ -78,6 +78,11 @@ public class UserControllerTest {
 
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
+        User responseUser = response.getBody();
+
+        assertEquals("luca", responseUser.getUsername());
+        assertEquals("testPassword", responseUser.getPassword());
+        assertEquals(0, responseUser.getId());
     }
 
     @Test
@@ -105,10 +110,11 @@ public class UserControllerTest {
         assertNotNull(response);
         assertEquals(200, response.getStatusCodeValue());
 
-        User u = response.getBody();
-        assertNotNull(u);
-        assertEquals(0, u.getId());
-        assertEquals("luca", u.getUsername());
+        User responseUser = response.getBody();
+        assertNotNull(responseUser);
+        assertEquals(0, responseUser.getId());
+        assertEquals("luca", responseUser.getUsername());
+        assertEquals("testPassword", responseUser.getPassword());
     }
 
     @Test

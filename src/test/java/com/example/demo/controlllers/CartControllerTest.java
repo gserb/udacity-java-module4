@@ -201,7 +201,7 @@ public class CartControllerTest {
     }
 
     @Test
-    public void remote_from_cart_invalid_username() throws Exception {
+    public void remove_from_cart_invalid_username() throws Exception {
         User testUser = new User();
         testUser.setId(0L);
         testUser.setUsername("luca");

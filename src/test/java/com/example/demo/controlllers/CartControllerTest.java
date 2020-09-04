@@ -53,6 +53,7 @@ public class CartControllerTest {
         Cart cart = new Cart();
         cart.setId(0L);
         cart.addItem(item);
+        cart.setUser(testUser);
 
         testUser.setCart(cart);
         when(userRepository.findByUsername("luca")).thenReturn(testUser);
@@ -88,6 +89,7 @@ public class CartControllerTest {
         Cart cart = new Cart();
         cart.setId(0L);
         cart.addItem(item);
+        cart.setUser(testUser);
 
         testUser.setCart(cart);
         when(userRepository.findByUsername("luca")).thenReturn(testUser);
